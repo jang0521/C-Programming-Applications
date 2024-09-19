@@ -1,98 +1,56 @@
 #include <stdio.h>
-
-int main() {
-    int a = 0;
-    int id = 0;
-    int inventory = 0;
-    int complete_sale_value = 0;
-    int all_inventory = 0;
-    int all_sale = 0;
-    double sale_percentage = 0;
-
-    while (1) {
-        printf("Enter the number of items (1-100): ");
-        scanf_s("%d", &a);
-        if (a > 100) {
-            printf("Value too high. Enter a value between 1 and 100.\n");
-        }
-        else if (a < 1) {
-            printf("Value too low. Enter a value between 1 and 100.\n");
-        }
-        else {
-            break;
-        }
-    }
-
-    int store_list[100];
-    int sale_list[100];
-    int inventory_list[100];
-
-    printf("Enter store list values:\n");
-    for (int i = 0; i < a; i++) {
-        scanf_s("%d", &store_list[i]);
-    }
-
-    printf("Enter sale list values:\n");
-    for (int i = 0; i < a; i++) {
-        scanf_s("%d", &sale_list[i]);
-    }
-
-
-    inventory = store_list[id] - sale_list[id];
-    for (int i = 0; i < a; i++) {
-        inventory_list[i] = store_list[i] - sale_list[i];
-    }
-
-
-    printf("¿Á∞Ì ºˆ∑Æ:\n");
-    for (int i = 0; i < a; i++) {
-        printf("%d ", inventory_list[i]);
-    }
-    printf("\n");
-    for (int i = 0; i < a; i++) {
-        complete_sale_value += sale_list[i];
-    }
-    for (int i = 0; i < a; i++) {
-        all_inventory += inventory_list[i];
-        all_sale += sale_list[i];
-    }
-    sale_percentage = (all_sale / all_inventory) * 100;
-    printf("√—∆«∏≈∑Æ:%d (∆«∏≈¿≤%.2lf %%\n",complete_sale_value,sale_percentage);
-
-
-    //√÷¥Î ∆«∏≈∑Æ π◊ √÷º“ ∆«∏≈∑Æ ∞ËªÍ
-    for (int i = 0; i < a; i++) {
-        int temp = 0;
-        int id_temp = 0;
-        temp = inventory_list[i] - sale_list[i];
-        if (temp < inventory_list[i + 1] - sale_list[i + 1]) {
-            temp = inventory_list[i + 1];
-            id_temp = i + 1;
-        }
-        printf("∞°¿Â ∏π¿Ã ∆«∏≈ µ» ªÛ«∞: ID %d,∆«∏≈∑Æ %d", id_temp, temp);
-    for (int i = 0; i < a; i++) {
-        int temp = 0;
-        int id_temp = 0;
-        temp = inventory_list[i] - sale_list[i];
-        if (temp > inventory_list[i + 1] - sale_list[i + 1]) {
-            temp = inventory_list[i + 1];
-            id_temp = i + 1;
-        }
-        printf("∞°¿Â ¿˚∞‘ ∆«∏≈ µ» ªÛ«∞: ID %d,∆«∏≈∑Æ %d", id_temp, temp);
-        }
-
-    
-
-
-
-
-
-    //¿Á∞Ì ∫Œ¡∑ »Æ¿Œ
-    for (int i = 0; i < a; i++) { 
-        if (inventory_list[i] <= 2) {
-            printf("ªÛ«∞ ID %d:¿Á∞Ì∫Œ¡∑(%d)\n", i, inventory_list[i]);
-        }
+#define SIZE 5
+store_list[SIZE];
+sale_list[SIZE];
+inventory[SIZE];
+void store_menu(*store_menu_list){
+    for (int i = 0; i < SIZE < i++){
         
     }
-    return 0;
+}
+void sale_menu1(*sale1_menu_list){
+    for (int i = 0; i < SIZE < i++){
+        
+    }
+}
+void sale_menu2(*sale2_menu_list){
+    for (int i = 0; i < SIZE < i++){
+        
+    }
+}
+void inventory_menu(*inventory_menu_list){
+    for (int i = 0; i < SIZE < i++){
+        
+    }
+}
+int main(){
+    int menu_choice;
+    while (1){
+    printf("[ÏáºÌïëÎ™∞ Ïû¨Í≥† Í¥ÄÎ¶¨ ÌîÑÎ°úÍ∑∏Îû®]\nÏõêÌïòÎäî Î©îÎâ¥Î•º ÏÑ†ÌÉùÌïòÏÑ∏Ïöî.(1.ÏûÖÍ≥† 2.ÌåêÎß§ 3.ÏÉÅÌíàÌòÑÌô© 4.Ï¢ÖÎ£å)");
+    scanf("%d",&menu_choice);
+    }
+    
+    if (menu_choice==1){
+        store_menu(store_list);
+        menu_choice=0;
+    }
+    
+    else if (menu_choice==2){
+        printf("ÌåêÎß§ÏàòÎüâ ÏûÖÎ†•:Ï†ÑÏ≤¥ ÏÉÅÌíà ÌåêÎß§ÏàòÎüâ ÏûÖÎ†• 1, Í∞úÎ≥Ñ ÏÉÅÌíà ÏûÖÎ†• 2Î•º ÏÑ†ÌÉù\n")
+        sale_list();
+        menu_choice=0;
+        scanf("%d",&menu_choice);
+        if (menu_choice == 1){
+            
+        }
+        else if(menu_choice == 2){
+            
+        }
+    }
+    
+    else if (menu_choice==3){
+        
+    }
+    
+    
 }
