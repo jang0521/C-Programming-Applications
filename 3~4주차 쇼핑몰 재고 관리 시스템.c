@@ -5,6 +5,7 @@
 int Quantity_list[SIZE];
 int Sell_list[SIZE];
 int Sub_Sell_list[SIZE];
+Quantitiy_list_name[SIZE];
 
 void Quantity1() {
     printf("전체 상품 입고량을 입력해주십시오\n");
@@ -34,7 +35,7 @@ void Selling1() {
     for (int i = 0; i < SIZE; i++) {
         scanf_s("%d", &Sell_list[i]);
         if (Sell_list[i] > Quantity_list[i]) {
-            printf("판매량이 재고보다 많습니다. 조정해주세요.\n");
+            printf("판매량이 재고보다 많습니다.\n");
             Sell_list[i] = Quantity_list[i];
         }
         Quantity_list[i] -= Sell_list[i];
@@ -52,7 +53,7 @@ void Selling2() {
     printf("판매량을 입력해주십시오\n");
     scanf_s("%d", &Sell_list[sell_num]);
     if (Sell_list[sell_num] > Quantity_list[sell_num]) {
-        printf("판매량이 재고보다 많습니다. 조정해주세요.\n");
+        printf("판매량이 재고보다 많습니다.\n");
         Sell_list[sell_num] = Quantity_list[sell_num];
     }
     Quantity_list[sell_num] -= Sell_list[sell_num];
@@ -102,7 +103,9 @@ void Cur_Situation() {
         }
     }
 }
+void Enter_Name() {
 
+}
 int main(void) {
     while (1) {
         int menu_choice = 0; // 메뉴 선택 변수
@@ -133,6 +136,9 @@ int main(void) {
             Cur_Situation();
         }
         else if (menu_choice == 4) {
+            Enter_Name();
+        }
+        else if (menu_choice == 5) {
             printf("프로그램을 종료합니다.\n");
             exit(0);
         }
