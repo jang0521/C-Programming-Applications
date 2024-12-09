@@ -1,6 +1,3 @@
-다음은 주석을 제거한 완성된 코드입니다.
-
-```c
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -66,4 +63,3 @@ int main() {
     printf("%s(%d) %c %s(%d) = %d\n", binary1, num1, op[0], binary2, num2, result);
     return 0;
 }
-```
